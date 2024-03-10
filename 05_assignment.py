@@ -108,7 +108,12 @@ def exercise08():
     '''
 
     # ------ Place code below here \/ \/ \/ ------
- 
+
+df = pd.read_csv ("https://raw.githubusercontent.com/MarjeteV/assignments/master/Sacramentorealestatetransactions.csv")
+row_count = len(df)
+avg_sq_ft = df.sq__ft.mean()
+df_zip_95670 = df[df.zip == 95670]
+df_zip_not_95610 = df[df.zip != 95610]
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -119,6 +124,7 @@ def exercise10(n):
     # Create a numpy identity matrix of size n
     # ------ Place code below here \/ \/ \/ ------
     
+identity_matrix = np.identity(n)
 
     # ------ Place code above here /\ /\ /\ ------  
     return identity_matrix
@@ -129,7 +135,9 @@ def exercise11(n):
     Reshape the array. The reshaped array, array_reshaped, should be n/3 columns and 3 rows
     '''
     # ------ Place code below here \/ \/ \/ ------
-
+array_1d = np.arrange(n)
+array_reshaped = array_1d.reshape(3,n//3)   
+    
     # ------ Place code above here /\ /\ /\ ------  
     return array_1d, array_reshaped
 
@@ -139,7 +147,8 @@ def exercise12(n):
     A checkerboard matrix is a matrix with alternating 1s and 0s across rows and columns with the top left value equal to 1
     '''
     # ------ Place code below here \/ \/ \/ ------
-    
+
+checkerboard_matrix = np.indices((2*n, 2*n)).sum(axis=0) % 2
 
     # ------ Place code above here /\ /\ /\ ------ 
 
@@ -152,8 +161,17 @@ def exercise13(n):
     
     '''
     # ------ Place code below here \/ \/ \/ ------
+def create_and_plot_series(n):
 
-   
+    s = np.random.randint(0, n, size=n)
+    
+    pd.Series(data, index=pd.date_range(start='1/1/2010', periods=n)).cumsum().plot(figsize=(10, 6))
+    plt.title('Cumulative Sum of Random Integers')
+    plt.xlabel('Date')
+    plt.ylabel('Cumulative Sum')
+    plt.grid(True)
+    plt.show()
+
     # ------ Place code above here /\ /\ /\ ------ 
     return s
 
@@ -165,7 +183,7 @@ def exercise14(words):
     Using Series.map() and lambdas may help.
     '''
     # ------ Place code below here \/ \/ \/ ------
-
+df = words
 
     # ------ Place code above here /\ /\ /\ ------ 
     return df
