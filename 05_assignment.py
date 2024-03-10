@@ -29,7 +29,7 @@ def exercise01():
 
     # ------ Place code below here \/ \/ \/ ------
 
-df = pd.DataFrame([[1, 2, 3, 4], [10, 11, 12, 13], [20, 30, 31, 32]])
+    df = pd.DataFrame([[1, 2, 3, 4], [10, 11, 12, 13], [20, 30, 31, 32]])
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -40,7 +40,7 @@ def exercise02(a):
 
     # ------ Place code below here \/ \/ \/ ------
     
-np.array(a)
+    np.array(a)
     
     # ------ Place code above here /\ /\ /\ ------
 
@@ -51,7 +51,7 @@ def exercise03(a):
 
     # ------ Place code below here \/ \/ \/ ------
     
-sum = np.sum(a)
+    sum = np.sum(a)
 
     # ------ Place code above here /\ /\ /\ ------
     return sum
@@ -61,7 +61,7 @@ def exercise04(a):
 
     # ------ Place code below here \/ \/ \/ ------
     
-sum = np.sum(a[:,1])    
+    sum = np.sum(a[:,1])    
 
     # ------ Place code above here /\ /\ /\ ------
     return sum
@@ -71,7 +71,7 @@ def exercise05(n):
 
     # ------ Place code below here \/ \/ \/ ------
     
-zeros = np.zeros((n,n))    
+    zeros = np.zeros((n,n))    
 
     # ------ Place code above here /\ /\ /\ ------
     return zeros
@@ -81,7 +81,7 @@ def exercise06(n):
 
     # ------ Place code below here \/ \/ \/ ------
     
-ones = np.ones((n,n))      
+    ones = np.ones((n,n))      
 
     # ------ Place code above here /\ /\ /\ ------
     return ones
@@ -92,7 +92,7 @@ def exercise07(sd,m,s):
 
     # ------ Place code below here \/ \/ \/ ------
     
-random_numbers = np.random.normal(loc=m, scale=sd, size=s)
+    random_numbers = np.random.normal(loc=m, scale=sd, size=s)
 
     # ------ Place code above here /\ /\ /\ ------
     return random_numbers
@@ -109,11 +109,11 @@ def exercise08():
 
     # ------ Place code below here \/ \/ \/ ------
 
-df = pd.read_csv ("https://raw.githubusercontent.com/MarjeteV/assignments/master/Sacramentorealestatetransactions.csv")
-row_count = len(df)
-avg_sq_ft = df.sq__ft.mean()
-df_zip_95670 = df[df.zip == 95670]
-df_zip_not_95610 = df[df.zip != 95610]
+    df = pd.read_csv ("https://raw.githubusercontent.com/MarjeteV/assignments/master/Sacramentorealestatetransactions.csv")
+    row_count = len(df)
+    avg_sq_ft = df.sq__ft.mean()
+    df_zip_95670 = df[df.zip == 95670]
+    df_zip_not_95610 = df[df.zip != 95610]
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -135,8 +135,8 @@ def exercise11(n):
     Reshape the array. The reshaped array, array_reshaped, should be n/3 columns and 3 rows
     '''
     # ------ Place code below here \/ \/ \/ ------
-array_1d = np.arrange(n)
-array_reshaped = array_1d.reshape(3,n//3)   
+    array_1d = np.arrange(n)
+    array_reshaped = array_1d.reshape(3,n//3)   
     
     # ------ Place code above here /\ /\ /\ ------  
     return array_1d, array_reshaped
@@ -148,7 +148,7 @@ def exercise12(n):
     '''
     # ------ Place code below here \/ \/ \/ ------
 
-checkerboard_matrix = np.indices((2*n, 2*n)).sum(axis=0) % 2
+    checkerboard_matrix = np.indices((2*n, 2*n)).sum(axis=0) % 2
 
     # ------ Place code above here /\ /\ /\ ------ 
 
@@ -161,7 +161,6 @@ def exercise13(n):
     
     '''
     # ------ Place code below here \/ \/ \/ ------
-def create_and_plot_series(n):
 
     s = np.random.randint(0, n, size=n)
     
@@ -183,7 +182,7 @@ def exercise14(words):
     Using Series.map() and lambdas may help.
     '''
     # ------ Place code below here \/ \/ \/ ------
-df = words
+    df = pd.Series(words).map(lambda x: len(x))
 
     # ------ Place code above here /\ /\ /\ ------ 
     return df
@@ -196,7 +195,7 @@ def exercise15():
     '''
     # ------ Place code below here \/ \/ \/ ------
 
-
+    df = df.iloc[::5, [0, 2]]
 
     # ------ Place code above here /\ /\ /\ ------ 
     return df
