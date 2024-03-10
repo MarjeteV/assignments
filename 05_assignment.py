@@ -28,7 +28,8 @@ def exercise01():
     '''
 
     # ------ Place code below here \/ \/ \/ ------
-    
+
+df = pd.DataFrame([[1, 2, 3, 4], [10, 11, 12, 13], [20, 30, 31, 32]])
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -39,6 +40,7 @@ def exercise02(a):
 
     # ------ Place code below here \/ \/ \/ ------
     
+np.array(a)
     
     # ------ Place code above here /\ /\ /\ ------
 
@@ -49,6 +51,7 @@ def exercise03(a):
 
     # ------ Place code below here \/ \/ \/ ------
     
+sum = np.sum(a)
 
     # ------ Place code above here /\ /\ /\ ------
     return sum
@@ -58,6 +61,7 @@ def exercise04(a):
 
     # ------ Place code below here \/ \/ \/ ------
     
+sum = np.sum(a[:,1])    
 
     # ------ Place code above here /\ /\ /\ ------
     return sum
@@ -67,6 +71,7 @@ def exercise05(n):
 
     # ------ Place code below here \/ \/ \/ ------
     
+zeros = np.zeros((n,n))    
 
     # ------ Place code above here /\ /\ /\ ------
     return zeros
@@ -76,6 +81,7 @@ def exercise06(n):
 
     # ------ Place code below here \/ \/ \/ ------
     
+ones = np.ones((n,n))      
 
     # ------ Place code above here /\ /\ /\ ------
     return ones
@@ -86,7 +92,8 @@ def exercise07(sd,m,s):
 
     # ------ Place code below here \/ \/ \/ ------
     
-    
+random_numbers = np.random.normal(loc=m, scale=sd, size=s)
+
     # ------ Place code above here /\ /\ /\ ------
     return random_numbers
 
